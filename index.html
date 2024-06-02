@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative Art Experiment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+
+    <div id="sidebar" class="sidebar hidden">
+        <button id="closeBtn" onclick="closeSidebar()">X</button>
+        <button class="sidebar-button" button onclick="refreshPage()">Refresh</button>
+        <button class="sidebar-button" button onclick="showText()">Show Text</button>
+        <button class="sidebar-button" button onclick="playMusic()">Play Music</button>
+    </div>
+    
+    <div id="sidebarToggle" onclick="toggleSidebar()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    
+    <div id="textDisplay" class="hidden"></div>
+    
+    <audio id="audio" src="Music.mp3"></audio>
+    
+    <script src="sketch.js"></script>
+</body>
+</html>

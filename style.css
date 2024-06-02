@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+}
+
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0; /* Initially hidden */
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: width 0.3s ease-in-out; /* Transition property added */
+}
+
+#closeBtn {
+  position: absolute;
+  top: 15px;
+  right: -145px; /* Adjusted position to move the button slightly to the right */
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: transparent; /* Set background color to transparent */
+  border: none; /* Remove border */
+}
+
+#sidebarToggle {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.sidebar button {
+  display: block;
+  width: 200px; /* Increased width to prevent wrapping */
+  padding: 15px 10px; /* Increased padding for bigger text */
+  background-color: transparent;
+  border: none;
+  color: white; /* Text color */
+  font-size: 20px; /* Increased font size */
+  text-align: left; /* Align text to the left */
+  cursor: pointer;
+  margin-left: -138px; /* Adjust the margin to move the text more to the left */
+}
+
+.sidebar button.show-text {
+  margin-left: -168px; /* Adjusted margin for 'Show Text' button */
+  padding-right: 40px; /* Increased padding to create more space between 'Show' and 'Text' */
+}
+
+.sidebar button.play-music {
+  margin-left: -145px; /* Adjusted margin for 'Play Music' button */
+}
+
+.sidebar button.refresh {
+  margin-left: -125px; /* Adjusted margin for 'Refresh' button */
+}
+
+.sidebar button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#textDisplay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-family: Arial, sans-serif; /* Set font to Arial */
+  text-align: center;
+  font-style: italic;
+  line-height: 1.4; /* Adjust the line height to increase spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a slight drop shadow */
+}
